@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="instagram.png">
+    <title>F4Life - Moradias Universitárias.</title>
+    
+    <style>
+        *{  
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        header{
+            position: relative;
+            background: #142333;
+            text-align: center;
+            color: #6ddad3;
+            font-size: 3vh;
+        }
+        
+        header img{
+            width: 450px;
+        }
+
+        nav{
+            display: flex;
+            background: #24444c;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+        }
+        nav a{
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background .3s;
+        }
+        nav a:hover{
+            background: #ddd;
+            color: black;
+        }
+        main{  
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .quem-somos{
+            flex: 30%;
+            padding: 20px;
+            background: #fff;
+            color: #24444c;
+            font-size: 3vh;
+        }
+        .gif{
+            width: 300px;
+        }
+        .produtos{
+            flex: 70%;
+            padding: 20px;
+            background: #e0e2e6;
+            text-align: center;
+            color: #24444c;
+        }
+        .ul-logo{
+            text-align: center;
+        }
+        .logo{
+            display: inline-block;
+            text-align: center;
+            width: 28%;
+            margin: 0 .5%;
+            padding: 20px;
+            border: 1px solid #142333;
+            border-radius: 10px;
+        }
+        .logo:hover{
+            border: 1px solid #6ddad3;
+        }
+        .img-produto{
+            width: 210px;
+            height: 150px;
+            border-radius: 5px;
+            transition: 0.25s;
+            box-shadow: 5px 5px 5px #24444c;
+        }
+        .img-produto:hover{
+            width: 220px;
+            height: 160px;
+        }
+        .button-visitar{
+            padding: 10px;
+            background: #24444c;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        .button-visitar:hover{
+            background: #142333;
+        }
+        .fale-conosco{
+            flex: 50%;
+            padding: 20px;
+            display: block;
+            background: #24444c;
+            color: #fff;
+        }
+        .form{
+            width: 250px;
+            height: 40px;
+            border: 0px;
+            border-radius: 5px;
+            font-size: 3vh;
+            color: #142333;
+        }
+        #email:invalid{
+            border-color: #ff0000;
+            box-shadow: 0px 0px 3px #ff0000;
+        }
+        #error-email{
+            display: inline;
+        }
+        textarea{
+            border: 0;
+            border-radius: 5px;
+            font-size: 3vh;
+            color: #142333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        textarea:focus, input:focus {
+            outline: 0;
+        }
+        button {
+            background-color: #6ddad3;
+            border: 1px solid #6ddad3;
+            padding: 12px 20px;
+            border-radius: 5px ;
+            transition: .3s;
+            color: #142333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 1px solid #6ddad3;
+            background-color: transparent;
+            color: #6ddad3;
+        }
+        .video{
+            flex: 50%;
+            padding: 35px;
+            background:#24444c;
+            color: #fff;
+        }
+        .redes-sociais{
+            list-style-type: none;
+        }
+        .redes-sociais img{
+            width: 40px;
+        }
+        .redes-sociais a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        footer{
+            padding: 10px;
+            background: #142333;
+            text-align: center;
+            color: #fff;   
+        }
+
+        @media screen and (max-width: 700px) {
+            main, nav {   
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .img-produto {   
+               width: 120px;
+               margin: -10px -50px;
+            }
+            .img-produto:hover {   
+               width: 120px;
+            }
+
+        }
+        @media screen and(max-width: 700px){
+            .logo{
+            display: inline-block;
+            text-align: center;
+            width: 28%;
+            margin: 0 .5%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #142333;
+            border-radius: 10px;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="">
+    </header>
+    <nav>
+        <a href="#kitnets">Kitnets</a>
+        <a href="#republica">Republica</a>
+        <a href="#lofts">Lofts</a>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#fale-conosco">Fale Conosco</a>
+    </nav>
+    <main>
+        <section class="produtos">
+            <h2 id="kitnets" class="titulo-prduto">KITNETS</h2>
+            <br><br>
+            <ul class="ul-logo">
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet2.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet3.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+            </ul>
+            <br><br>
+        
+            <h2 id="republica" class="titulo-prduto">REPÚBLICAS</h2>
+            <br><br>
+            <ul class="ul-logo">
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet2.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet3.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+            </ul>
+            <br><br>
+            <h2 id="lofts" class="titulo-prduto">LOFTS</h2>
+            <br><br>
+            <ul class="ul-logo">
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet3.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet2.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+                <li class="logo">
+                    <img  class="img-produto" src="produto-kitnet.jpeg" alt=""><br><br>
+                    <p><strong>Avenidade Ficticia, 60</strong></p>
+                    Inventado, São paulo/SP</p><br>
+                    <h3>R$: 500,00</h3><br>
+                    <a class="button-visitar" href="#">Visitar</a>
+                </li>
+            </ul>
+        </section>
+        <section id="quem-somos" class="quem-somos">
+            <h2>Quem Somos?</h2>
+            <br>
+            <p>
+                A F4Life é uma empresa de aluguéis de repúblicas para pessoas universitárias. <br>
+                Similar aos modelos de Quinto Andar e Loft, a nossa empresa também realiza reformas e prepara moradias para recepção dos
+                universitários em um ambiente específico e otimizado para a vida de graduação.
+            </p>
+            <br>
+            <br>
+            
+
+            <h5>Demonstração: </h5>
+            <img src="kitnet.jpeg" alt="Demonstração Kitnet"><br>
+            <br>
+            <p>
+                Somos <strong> a maior imobiliária digital do Brasil</strong> e diferente do que era tradição,
+                alugamos kitnets para moradia compartilhada de um jeito único no mundo para você que quer economizar
+                e dividir um lugarzinho com seus amigos durante a sua graduação. <br><br>
+                Nossa plataforma, tem como objetivo ajudar principalmente universitários a 
+                procura de um lugar perto de sua universidade para compartilhar com outros estudantes. <br><br>
+                Oferecemos a você, moradia compartilhada de ate 3 dormitórios além de nossas kitnets mobiliadas da forma
+                mais fácil e prática possivel.
+                Para o inquilino, nada de burocracia com fiador ou cheque caução. <br><br>
+                Para o proprietário, a garantia de que o aluguel vai estar na conta todo o 
+                dia programado e a Proteção F4life, que cobre até <strong>R$ 50 mil</strong> em danos ao imóvel
+                não reparados pelo inquilino ao fim do contrato.<br><br>
+                Já ajudamos milhares de estudantes a encontrar o seu espacinho perfeito pertinho da sua universidade de forma prática,
+                transparente e sem letras miúdas. <strong>Viemos para simplificar</strong> o jeito de morar do início ao fim.
+            </p>
+            <br>
+            <img class="gif" src="kitnet2.gif" alt="Kitnet gif">
+        </section>
+        <section class="video">
+            <h2>Encontre-nos nas redes sociais: </h2><br>
+                <ul>
+                    <li class="redes-sociais">
+                        <a href="https://pt-br.facebook.com/" target="blank"><img src="facebook.png" alt="Facebook">
+                            facebook.com/f4lifemoradias
+                        </a> <br>
+
+                        <a href="https://twitter.com/" target="blank"><img src="twitter.png" alt="Facebook">
+                            twitter.com/f4lifemoradias
+                        </a><br>
+
+                        <a href="https://www.instagram.com/" target="blank"><img src="instagram.png" alt="Facebook">
+                            instagram.com/f4lifemoradias
+                        </a><br>
+
+                        <a href="https://www.youtube.com" target="blank"><img src="youtube.png" alt="Facebook">
+                            youtube/f4lifemoradias
+                        </a>
+                    </li>
+                </ul><br>
+            <iframe width="400" height="250" src="https://www.youtube.com/embed/1njBNt8DtG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="fale-conosco" class="fale-conosco">
+            <form>
+                <h2>FALE CONOSCO</h2>
+                <p>Deixei aqui seu elogio, reclamação ou sujestão. Precisamos da sua ajuda para seguir sendo a melhor plataforma 
+                    de aluguel de <strong>repúblicas</strong>, <strong>kitnets</strong> e <strong>lofts</strong> do Brasil.</p><br><br>
+                
+                <label for="nome">Nome : </label>
+                <input id="nome" class="form"  type="text" placeholder="  Digite seu nome"><br><br>
+                <label for="email">E-mail : </label>
+                <input type="email" id="email" class="form" placeholder="  seuemail@email.com" onfocus=""> <p id="error-email"></p> <br><br>
+                
+                <label  for="Cel">Celular: </label>
+                <input id="cel" class="form" type="tel" placeholder="  (xx) xxxxx-xxxx" maxlength="15"><br><br><br>
+            
+                <label for="textares">Mensagem: </label><br>
+                <p id="valida"></p>
+                <textarea id="mensagem" placeholder="Digite aqui sua mensagem... " cols="40" rows="5"></textarea><br>
+                <button id="botao"  class="button-enviar">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy F4LIFE - Moradias universitárias</p>
+        <p>2022</p>
+    </footer>
+    <script>
+
+        const email = document.getElementById('email');
+        const error = document.getElementById('error-email');
+        const mensagem = document.getElementById('mensagem');
+        const valida = document.getElementById('valida');
+        const botao = document.getElementById('botao');
+
+        botao.addEventListener("click", erro);
+        function erro (){
+            let checkEmail = email.value;
+            let splittedUser = checkEmail.split('@');
+            
+            if(!email.checkValidity() || splittedUser[0].length > 32 || splittedUser[1].length > 16){
+                error.innerText = "";
+                error.style.color="red";
+                error.style.fontWeight="bold";
+                error.innerText += "E-mail invalido!";
+                event.preventDefault();
+            }
+            else{
+                verifica();
+                clean();
+                error.innerText=""; 
+                event.preventDefault();
+            }
+
+            
+            
+        }
+
+        function verifica(){
+            const user = email.value;
+            const splittedEmail = user.split('@');
+
+            if(mensagem.value == ""){
+                valida.innerText = "";
+                valida.style.color="red";
+                valida.style.fontWeight="bold";
+                valida.style.padding="20px 0px";
+                valida.innerText += "Você precisa adicionar uma mensagem!!!";
+            }else{
+                valida.innerText = "";
+                valida.style.color="white";
+                valida.style.fontWeight="bold";
+                valida.style.padding="20px 0px";
+                valida.innerText += `Muito obrigado pelo contato, ${splittedEmail[0]}!`;
+            }
+
+        }
+        
+        function clean(){
+            document.getElementById('mensagem').value ="";
+            document.getElementById('email').value="";
+            document.getElementById('nome').value=""; 
+            document.getElementById('cel').value="";
+        }
+
+    </script>
+</body>
+</html>
